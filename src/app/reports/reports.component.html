@@ -1,0 +1,145 @@
+<!-- WRAPPER -->
+<div id="wrapper">
+	<!-- NAVBAR -->
+	<app-header-nav></app-header-nav>
+	<!-- END NAVBAR -->
+
+	<!-- LEFT SIDEBAR -->
+	<app-sidebar-left-nav></app-sidebar-left-nav>
+
+	<!-- MAIN -->
+	<div class="main">
+		<!-- MAIN CONTENT -->
+		<div class="main-content">
+			<div class="container-fluid">
+				<!-- OVERVIEW -->
+				<div class="date_wrapper">
+					<h1>Chart</h1>
+					<div class="right_side">
+						<div class="select_date">
+							<i class="fa fa-calendar" aria-hidden="true"></i>
+							2022 - 2023
+							<i class="fa fa-angle-right" aria-hidden="true" style="font-size: 24px;"></i>
+						</div>
+						<img src="assets/img/circle-btn.png" style="width: 65px; margin-top: -5px;">
+					</div>
+				</div>
+				<div class="panel panel-headline">
+					<!-- <div class="panel-heading">
+                        <h3 class="panel-title">Overview</h3>
+                        <p class="panel-subtitle">Time:</p>
+                    </div> -->
+					<div class="panel-body">
+						<div class="flex-container">
+							<div class="select_main">
+								<div>Type</div>
+								<div class="select-wrapper">
+									<select id="select" name="select">
+										<option>RPC</option>
+										<option>Cherry</option>
+										<option>Lemon</option>
+									</select>
+								</div>
+							</div>
+							<div class="select_main">
+								<div>Zone</div>
+								<div class="select-wrapper">
+									<select id="select" name="select">
+										<option>West</option>
+										<option>Cherry</option>
+										<option>Lemon</option>
+									</select>
+								</div>
+							</div>
+							<div class="select_main">
+								<div>Region</div>
+								<div class="select-wrapper">
+									<select id="select" name="select">
+										<option>MUM</option>
+										<option>Cherry</option>
+										<option>Lemon</option>
+									</select>
+								</div>
+							</div>
+							<div class="select_main">
+								<div>Team Type</div>
+								<div class="select-wrapper">
+									<select id="select" name="select">
+										<option>Marketing</option>
+										<option>Cherry</option>
+										<option>Lemon</option>
+									</select>
+								</div>
+							</div>
+							<div class="select_main">
+								<div>Person Name</div>
+								<div class="select-wrapper">
+									<select id="select" name="select">
+										<option>Piya Mukherjee</option>
+										<option>Cherry</option>
+										<option>Lemon</option>
+									</select>
+								</div>
+							</div>
+							<div class="select_main">
+								<div>Piya Mukherjee</div>
+								<div class="select-wrapper">
+									<select id="select" name="select">
+										<option>Warrior</option>
+										<option>Cherry</option>
+										<option>Lemon</option>
+									</select>
+								</div>
+							</div>
+							<div class="select_main">
+								<div>Center Name</div>
+								<div class="select-wrapper">
+									<select id="select" name="select">
+										<option>Malad - Mumbai</option>
+										<option>Cherry</option>
+										<option>Lemon</option>
+									</select>
+								</div>
+							</div>
+						</div>
+			
+				
+						<div  class="chart">
+							<canvas id="myChart" style="height: 300px; width: 100%;"></canvas>
+						  </div>
+			
+
+
+			<table id="example" class="display" style="width:100%">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Zone</th>
+						<th>Region</th>
+						<th>Team Type</th>
+						<th>Month</th>
+						<th>Royalty + SK</th>
+						<th>Enrolments</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let item of data">
+						<td>{{item.name}}</td>
+						<td>{{item.zone}}</td>
+						<td>{{item.regin}}</td>
+						<td>{{item.type}}</td>
+						<td>{{item.month}}</td>
+						<td>{{item.sk}}</td>
+						<td>{{item.enrolment}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</div>
+	</div>
+	<!-- END OVERVIEW -->
+		</div>
+	</div>
+	<!-- END MAIN CONTENT -->
+</div>
+<!-- END MAIN -->
