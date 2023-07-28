@@ -8,10 +8,10 @@ import { ServiceService } from '../service.service';
 })
 export class SidebarLeftNavComponent implements OnInit {
 
-  isActive:boolean = true;
-  constructor(private service: ServiceService) { 
-    this.service.isEnable.subscribe((res: any) => {  
-        this.isActive = res;
+  isActive: boolean = true;
+  constructor(private service: ServiceService) {
+    this.service.isEnable.subscribe((res: any) => {
+      this.isActive = res;
     })
   }
 
