@@ -81,7 +81,8 @@ th {
 
 @media screen and (max-width: 1024px) {
   #wrapper .sidebar {
-    left: -260px; }
+    left: -260px; 
+  }
   #wrapper .main {
     width: 100%; }
   #wrapper .navbar {
@@ -257,7 +258,8 @@ html.fullscreen-bg #wrapper {
       padding: 15px 20px; }
       .navbar-nav > li > a span:not(.badge),
       .navbar-nav > li > a .icon-submenu {
-        display: none; }
+        /* display: none;  */
+      }
     .navbar-nav .open .dropdown-menu {
       -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
       -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);

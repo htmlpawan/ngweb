@@ -38,11 +38,13 @@ select {
     display: flex;
     align-items: center;
     justify-content: space-between;
-     .right_side{
+
+    .right_side {
         display: flex;
         align-items: center;
         justify-content: space-between;
-     }
+    }
+
     .select_date {
         background-color: #fff;
         padding: 16px 20px;
@@ -51,13 +53,26 @@ select {
         align-items: center;
         gap: 15px;
         border-radius: 8px;
-        margin-right: 20px;
+        margin-right: 10px;
         cursor: pointer;
     }
 }
+
 .chart {
-    height: 300px; 
+    height: 300px;
     width: 100%;
     margin: 40px 0;
-  }
-  tr { height: 60px } 
+}
+
+tr {
+    height: 60px
+}
+@media (max-width:768px) {
+    h1{
+        font-size: 20px;
+    }
+}
+
+.fullWidth {
+    width: 100% !important;
+}

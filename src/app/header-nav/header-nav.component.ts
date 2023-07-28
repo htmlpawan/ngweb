@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceService } from '../service.service';
 
 @Component({
   selector: 'app-header-nav',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header-nav.component.scss']
 })
 export class HeaderNavComponent implements OnInit {
-
-  constructor() { }
+  isActive:boolean = false;
+  constructor(private service: ServiceService) { }
 
   ngOnInit(): void {
+  }
+  toggle(){
+    this.isActive = !this.isActive;
+    this.service.isEnable.next(this.isActive);
   }
 
 }

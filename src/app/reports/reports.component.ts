@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import DataTable from 'datatables.net-dt';
 import Chart, { elements } from 'chart.js/auto';
+import { ServiceService } from '../service.service';
 
 // var $ = require( 'jquery' );
 
@@ -35,7 +36,12 @@ export class ReportsComponent implements OnInit {
     {name:'Piya Mukherjee',zone:'West',regin:'MUM',type:'Marketing', month:'Jan',sk:'41,65,5078',enrolment:'3,461'},
 ];
   ctx:any;
-  constructor() { }
+  isActive:boolean = true;
+  constructor(private service: ServiceService) { 
+    this.service.isEnable.subscribe((res: any) => {  
+        this.isActive = res;
+    })
+  }
 
   ngOnInit(): void {
      this.ctx = document.getElementById('myChart');
@@ -57,7 +63,8 @@ export class ReportsComponent implements OnInit {
     setTimeout(() => {
       new DataTable('#example', {
         searching:false,
-        pageLength:5
+        pageLength:5,
+
   });
     }, 200);
    

@@ -1,0 +1,18 @@
+@media(min-width:768px) {
+    .sideLeft{
+        left: -260px !important;
+        }
+        .sideRight{
+            left: 0 !important;
+        } 
+}
+
+@media(max-width:768px) {
+    .sideLeft{
+        left: 0px !important;
+        }
+        .sideRight{
+            left: -260px !important;
+        } 
+}
+

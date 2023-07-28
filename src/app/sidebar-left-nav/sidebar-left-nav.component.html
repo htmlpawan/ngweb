@@ -1,8 +1,8 @@
-<div id="sidebar-nav" class="sidebar">
+<div id="sidebar-nav" class="sidebar" [ngClass]="{'sideLeft': isActive, 'sideRight': !isActive}">
     <div class="sidebar-scroll">
         <nav>
             <ul class="nav">
-                <li><a routerLink="reports" routerLinkActive="active"><span><i class="fa fa-home"></i>
+                <li><a routerLink=""><span><i class="fa fa-home"></i>
                             Dashboard</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
 
                 <li><a routerLink=""><span><i class="fa fa-user"></i> Student</span> <i class="fa fa-angle-down"
@@ -19,7 +19,7 @@
                             class="fa fa-angle-down" aria-hidden="true"></i></a></li>
                 <li><a routerLink=""><span><i class="fa fa-calendar-o"></i> Time Table</span> <i
                             class="fa fa-angle-down" aria-hidden="true"></i></a></li>
-                <li><a routerLink=""><span><i class="fa fa-bar-chart"></i> Reports</span> <i
+                <li><a routerLink=""  routerLinkActive="active"><span><i class="fa fa-bar-chart"></i> Reports</span> <i
                             class="fa fa-angle-down" aria-hidden="true"></i></a></li>
                 <li><a routerLink=""><span><i class="fa fa-download"></i> Downloads</span> <i
                             class="fa fa-angle-down" aria-hidden="true"></i></a></li>

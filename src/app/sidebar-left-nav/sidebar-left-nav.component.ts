@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceService } from '../service.service';
 
 @Component({
   selector: 'app-sidebar-left-nav',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarLeftNavComponent implements OnInit {
 
-  constructor() { }
+  isActive:boolean = true;
+  constructor(private service: ServiceService) { 
+    this.service.isEnable.subscribe((res: any) => {  
+        this.isActive = res;
+    })
+  }
 
   ngOnInit(): void {
   }
