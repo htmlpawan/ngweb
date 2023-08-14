@@ -1,0 +1,14 @@
+<br><br>
+<div class="container">
+    <form [formGroup]="reactForm" (ngSubmit)="submit()">
+        Item <input type="text" formControlName="item"><br>
+        Price <input type="text" formControlName="price"><br>
+        <input type="Submit" [disabled]="!reactForm.valid">
+    </form>
+     <br>
+     <div>{{fullname}}</div>
+    <div>{{firstname}}</div> <div>{{secondname}}</div>
+    <div>First Name <input type="text" #first><button (click)="firstcall(first.value)">First</button></div>
+    <div>Second Name <input type="text" #second><button (click)="secondcall(second.value)">second</button></div>
+   
+</div>
